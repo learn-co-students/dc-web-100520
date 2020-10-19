@@ -1,14 +1,8 @@
 class Doctor < ActiveRecord::Base 
 
-    def hospital
-        # write the code needed to return 
-        # the hospital associated with this doctor
-        # Hospital.all.find do |hospital|
-        #     hospital.id == self.hospital_id
-        # end # slow and not advised
-
-        Hospital.find_by(id: self.hospital_id)
-    end
+    belongs_to :hospital
+    has_many :doctor_patients
+    has_many(:patients, {through: :doctor_patients})
 
     def self.print_all_doctor_names
         Doctor.all.each do |doctor|

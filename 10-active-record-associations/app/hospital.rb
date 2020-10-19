@@ -1,6 +1,5 @@
 class Hospital < ActiveRecord::Base
 
-    def doctors 
-        Doctor.all
-    end
+    has_many :doctors
+
 end
