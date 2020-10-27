@@ -3,5 +3,11 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   movies = Movie.create([{ name: 'Star Wars psh' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Taco.destroy_all
+
+20.times do 
+    Taco.create(name: "#{Faker::Hipster.word.titlecase} Taco", price: rand(1.0..10.0).round(2), vegetarian: [true, false].sample)
+
+end

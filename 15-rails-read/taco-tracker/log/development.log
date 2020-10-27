@@ -1176,3 +1176,199 @@ Migrating to CreateTacos (20201027153642)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.4ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Keffiyeh Taco"], ["vegetarian", 1], ["price", 3.0], ["created_at", "2020-10-27 15:45:50.931000"], ["updated_at", "2020-10-27 15:45:50.931000"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kinfolk Taco"], ["vegetarian", 0], ["price", 4.0], ["created_at", "2020-10-27 15:45:50.934594"], ["updated_at", "2020-10-27 15:45:50.934594"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Post Ironic Taco"], ["vegetarian", 1], ["price", 6.0], ["created_at", "2020-10-27 15:45:50.937372"], ["updated_at", "2020-10-27 15:45:50.937372"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Marfa Taco"], ["vegetarian", 0], ["price", 5.0], ["created_at", "2020-10-27 15:45:50.940528"], ["updated_at", "2020-10-27 15:45:50.940528"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Whatever Taco"], ["vegetarian", 1], ["price", 10.0], ["created_at", "2020-10-27 15:45:50.943686"], ["updated_at", "2020-10-27 15:45:50.943686"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Franzen Taco"], ["vegetarian", 1], ["price", 5.0], ["created_at", "2020-10-27 15:45:50.946942"], ["updated_at", "2020-10-27 15:45:50.946942"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Goth Taco"], ["vegetarian", 1], ["price", 8.0], ["created_at", "2020-10-27 15:45:50.949752"], ["updated_at", "2020-10-27 15:45:50.949752"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Helvetica Taco"], ["vegetarian", 0], ["price", 10.0], ["created_at", "2020-10-27 15:45:50.952914"], ["updated_at", "2020-10-27 15:45:50.952914"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Microdosing Taco"], ["vegetarian", 1], ["price", 10.0], ["created_at", "2020-10-27 15:45:50.955941"], ["updated_at", "2020-10-27 15:45:50.955941"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scenester Taco"], ["vegetarian", 0], ["price", 3.0], ["created_at", "2020-10-27 15:45:50.958736"], ["updated_at", "2020-10-27 15:45:50.958736"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.7ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sustainable Taco"], ["vegetarian", 0], ["price", 7.0], ["created_at", "2020-10-27 15:45:50.961791"], ["updated_at", "2020-10-27 15:45:50.961791"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Brunch Taco"], ["vegetarian", 0], ["price", 3.0], ["created_at", "2020-10-27 15:45:50.966192"], ["updated_at", "2020-10-27 15:45:50.966192"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Waistcoat Taco"], ["vegetarian", 1], ["price", 4.0], ["created_at", "2020-10-27 15:45:50.969154"], ["updated_at", "2020-10-27 15:45:50.969154"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Umami Taco"], ["vegetarian", 1], ["price", 4.0], ["created_at", "2020-10-27 15:45:50.973514"], ["updated_at", "2020-10-27 15:45:50.973514"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Vhs Taco"], ["vegetarian", 0], ["price", 8.0], ["created_at", "2020-10-27 15:45:50.976978"], ["updated_at", "2020-10-27 15:45:50.976978"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Plaid Taco"], ["vegetarian", 1], ["price", 7.0], ["created_at", "2020-10-27 15:45:50.980036"], ["updated_at", "2020-10-27 15:45:50.980036"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Vhs Taco"], ["vegetarian", 1], ["price", 9.0], ["created_at", "2020-10-27 15:45:50.983892"], ["updated_at", "2020-10-27 15:45:50.983892"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Master Taco"], ["vegetarian", 0], ["price", 8.0], ["created_at", "2020-10-27 15:45:50.987642"], ["updated_at", "2020-10-27 15:45:50.987642"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Flannel Taco"], ["vegetarian", 0], ["price", 4.0], ["created_at", "2020-10-27 15:45:50.990893"], ["updated_at", "2020-10-27 15:45:50.990893"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hammock Taco"], ["vegetarian", 0], ["price", 3.0], ["created_at", "2020-10-27 15:45:50.993747"], ["updated_at", "2020-10-27 15:45:50.993747"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tacos" WHERE "tacos"."id" = ?[0m  [["id", 20]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.5ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Paleo Taco"], ["vegetarian", 1], ["price", 2.27], ["created_at", "2020-10-27 15:46:32.071200"], ["updated_at", "2020-10-27 15:46:32.071200"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sartorial Taco"], ["vegetarian", 0], ["price", 7.14], ["created_at", "2020-10-27 15:46:32.076684"], ["updated_at", "2020-10-27 15:46:32.076684"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kinfolk Taco"], ["vegetarian", 1], ["price", 4.25], ["created_at", "2020-10-27 15:46:32.080306"], ["updated_at", "2020-10-27 15:46:32.080306"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chia Taco"], ["vegetarian", 0], ["price", 5.14], ["created_at", "2020-10-27 15:46:32.083839"], ["updated_at", "2020-10-27 15:46:32.083839"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ramps Taco"], ["vegetarian", 0], ["price", 3.98], ["created_at", "2020-10-27 15:46:32.088004"], ["updated_at", "2020-10-27 15:46:32.088004"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chillwave Taco"], ["vegetarian", 1], ["price", 6.43], ["created_at", "2020-10-27 15:46:32.091735"], ["updated_at", "2020-10-27 15:46:32.091735"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Shoreditch Taco"], ["vegetarian", 0], ["price", 9.6], ["created_at", "2020-10-27 15:46:32.095232"], ["updated_at", "2020-10-27 15:46:32.095232"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Church Key Taco"], ["vegetarian", 0], ["price", 6.25], ["created_at", "2020-10-27 15:46:32.099301"], ["updated_at", "2020-10-27 15:46:32.099301"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pinterest Taco"], ["vegetarian", 1], ["price", 2.25], ["created_at", "2020-10-27 15:46:32.103393"], ["updated_at", "2020-10-27 15:46:32.103393"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Intelligentsia Taco"], ["vegetarian", 0], ["price", 1.7], ["created_at", "2020-10-27 15:46:32.107530"], ["updated_at", "2020-10-27 15:46:32.107530"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Brunch Taco"], ["vegetarian", 0], ["price", 4.74], ["created_at", "2020-10-27 15:46:32.110688"], ["updated_at", "2020-10-27 15:46:32.110688"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "8 Bit Taco"], ["vegetarian", 0], ["price", 9.36], ["created_at", "2020-10-27 15:46:32.114269"], ["updated_at", "2020-10-27 15:46:32.114269"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Whatever Taco"], ["vegetarian", 0], ["price", 1.06], ["created_at", "2020-10-27 15:46:32.117337"], ["updated_at", "2020-10-27 15:46:32.117337"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Disrupt Taco"], ["vegetarian", 1], ["price", 8.89], ["created_at", "2020-10-27 15:46:32.120682"], ["updated_at", "2020-10-27 15:46:32.120682"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Tattooed Taco"], ["vegetarian", 1], ["price", 7.43], ["created_at", "2020-10-27 15:46:32.124468"], ["updated_at", "2020-10-27 15:46:32.124468"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scenester Taco"], ["vegetarian", 1], ["price", 5.78], ["created_at", "2020-10-27 15:46:32.128238"], ["updated_at", "2020-10-27 15:46:32.128238"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scenester Taco"], ["vegetarian", 0], ["price", 7.59], ["created_at", "2020-10-27 15:46:32.131061"], ["updated_at", "2020-10-27 15:46:32.131061"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.2ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Readymade Taco"], ["vegetarian", 0], ["price", 3.27], ["created_at", "2020-10-27 15:46:32.134004"], ["updated_at", "2020-10-27 15:46:32.134004"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.4ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Gluten Free Taco"], ["vegetarian", 0], ["price", 1.68], ["created_at", "2020-10-27 15:46:32.137273"], ["updated_at", "2020-10-27 15:46:32.137273"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Create (0.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Brooklyn Taco"], ["vegetarian", 0], ["price", 2.21], ["created_at", "2020-10-27 15:46:32.140767"], ["updated_at", "2020-10-27 15:46:32.140767"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTaco Update (0.4ms)[0m  [1m[33mUPDATE "tacos" SET "price" = ?, "updated_at" = ? WHERE "tacos"."id" = ?[0m  [["price", 5.27], ["updated_at", "2020-10-27 15:47:41.275878"], ["id", 21]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
