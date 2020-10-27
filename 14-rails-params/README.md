@@ -8,8 +8,9 @@
 
 ## Questions 
 
-- implicit rendering of the template?
+<!-- - implicit rendering of the template?
 - convention over configuration?
-- can I just ignore the tests (sometimes)
+- can I just ignore the tests (sometimes) -->
 - What is a get parameter?
-- request / response cycle review
+<!-- - request / response cycle review -->
+- 
