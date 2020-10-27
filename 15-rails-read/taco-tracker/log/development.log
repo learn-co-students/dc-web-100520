@@ -1372,3 +1372,320 @@ Migrating to CreateTacos (20201027153642)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mTaco Update (0.4ms)[0m  [1m[33mUPDATE "tacos" SET "price" = ?, "updated_at" = ? WHERE "tacos"."id" = ?[0m  [["price", 5.27], ["updated_at", "2020-10-27 15:47:41.275878"], ["id", 21]]
   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/rails/info/routes" for ::1 at 2020-10-27 11:51:11 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (Duration: 6.9ms | Allocations: 3570)
+  Rendered /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 2.0ms | Allocations: 889)
+  Rendered /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 13.4ms | Allocations: 7356)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 12227)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 11:51:39 -0400
+Processing by TacosController#index as HTML
+Completed 500 Internal Server Error in 95714ms (ActiveRecord: 0.0ms | Allocations: 56553)
+
+
+Started GET "/asldfhjgkaljfg" for ::1 at 2020-10-27 11:53:14 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/tacos_controller.rb:5:in `index'
+  
+ActionController::RoutingError (No route matches [GET] "/asldfhjgkaljfg"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-27 11:53:36 -0400
+Processing by ApplicationController#home as HTML
+  Rendering application/home.html.erb within layouts/application
+  Rendered application/home.html.erb within layouts/application (Duration: 4.8ms | Allocations: 35199)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 458ms (Views: 428.3ms | ActiveRecord: 0.0ms | Allocations: 2837954)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 11:53:49 -0400
+Processing by TacosController#index as HTML
+  [1m[36mTaco Load (0.4ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/tacos_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 75436ms (ActiveRecord: 1.1ms | Allocations: 155985)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/tacos_controller.rb:5:in `index'
+Started GET "/tacos" for ::1 at 2020-10-27 11:55:57 -0400
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  Rendered tacos/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 31073)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 164ms (Views: 126.9ms | ActiveRecord: 0.0ms | Allocations: 1580005)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 12:00:20 -0400
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (5.0ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:4
+  Rendered tacos/index.html.erb within layouts/application (Duration: 186.0ms | Allocations: 1800335)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 344ms (Views: 299.2ms | ActiveRecord: 18.2ms | Allocations: 3203363)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 12:03:19 -0400
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (1.9ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:4
+  Rendered tacos/index.html.erb within layouts/application (Duration: 61.4ms | Allocations: 547868)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 214ms (Views: 189.4ms | ActiveRecord: 1.9ms | Allocations: 1946340)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 12:04:15 -0400
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (3.7ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:4
+  Rendered tacos/index.html.erb within layouts/application (Duration: 75.1ms | Allocations: 547872)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 539ms (Views: 508.7ms | ActiveRecord: 3.7ms | Allocations: 4128294)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 12:04:34 -0400
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (2.7ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:4
+  Rendered tacos/index.html.erb within layouts/application (Duration: 71.8ms | Allocations: 523591)
+Completed 500 Internal Server Error in 290ms (ActiveRecord: 2.7ms | Allocations: 2022268)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after "    margin-left": expected "}", was ": 20px"
+        on line 7:5 of app/assets/stylesheets/tacos.scss
+>>     margin-left: 20px
+
+   ----^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/tacos.scss:7
+app/views/layouts/application.html.erb:8
+app/controllers/tacos_controller.rb:5:in `index'
+Started GET "/tacos" for ::1 at 2020-10-27 12:04:56 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (4.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:4
+  Rendered tacos/index.html.erb within layouts/application (Duration: 61.0ms | Allocations: 541216)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 552ms (Views: 528.4ms | ActiveRecord: 4.2ms | Allocations: 5350959)
+
+
+Started GET "/tacos/27" for ::1 at 2020-10-27 12:06:10 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ (byebug):1:in `show'
+Completed 500 Internal Server Error in 31501ms (ActiveRecord: 0.7ms | Allocations: 219391)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/tacos_controller.rb:10:in `show'
+Started GET "/tacos/27" for ::1 at 2020-10-27 12:07:53 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mTaco Load (1.8ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:10:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 31073)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 355ms (Views: 118.2ms | ActiveRecord: 27.0ms | Allocations: 3153035)
+
+
+Started GET "/tacos/27" for ::1 at 2020-10-27 12:08:46 -0400
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mTaco Load (1.5ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:10:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 56607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 199ms (Views: 139.1ms | ActiveRecord: 1.5ms | Allocations: 1673420)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 12:09:48 -0400
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (4.8ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:4
+  Rendered tacos/index.html.erb within layouts/application (Duration: 65.3ms | Allocations: 561415)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 239ms (Views: 195.4ms | ActiveRecord: 4.8ms | Allocations: 1971962)
+
+
+Started GET "/tacos/27" for ::1 at 2020-10-27 12:10:51 -0400
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mTaco Load (4.6ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:10:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 56600)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 204ms (Views: 146.2ms | ActiveRecord: 4.6ms | Allocations: 1673354)
+
+
+Started GET "/tacos/27" for ::1 at 2020-10-27 12:11:47 -0400
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mTaco Load (2.5ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:10:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 56605)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 235ms (Views: 141.6ms | ActiveRecord: 2.5ms | Allocations: 1673432)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-10-27 12:13:08 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (Duration: 183.9ms | Allocations: 1866584)
+  Rendered /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 16.1ms | Allocations: 141370)
+  Rendered /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 386.5ms | Allocations: 3845171)
+Completed 200 OK in 451ms (Views: 417.5ms | ActiveRecord: 0.0ms | Allocations: 4436963)
+
+
+Started GET "/tacos/27" for ::1 at 2020-10-27 12:13:48 -0400
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mTaco Load (1.4ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:10:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 92240)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 202ms (Views: 148.1ms | ActiveRecord: 1.4ms | Allocations: 1712973)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 12:13:55 -0400
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (5.5ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:4
+  Rendered tacos/index.html.erb within layouts/application (Duration: 63.1ms | Allocations: 547870)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 239ms (Views: 199.5ms | ActiveRecord: 5.5ms | Allocations: 1771376)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-10-27 12:15:17 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (Duration: 178.6ms | Allocations: 1869143)
+  Rendered /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 14.7ms | Allocations: 141370)
+  Rendered /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 365.8ms | Allocations: 3847734)
+Completed 200 OK in 490ms (Views: 395.6ms | ActiveRecord: 0.0ms | Allocations: 4714352)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-10-27 12:16:18 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (Duration: 173.7ms | Allocations: 1824959)
+  Rendered /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 10.0ms | Allocations: 86952)
+  Rendered /Users/pnicholsen/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 350.2ms | Allocations: 3654154)
+Completed 200 OK in 468ms (Views: 365.5ms | ActiveRecord: 0.0ms | Allocations: 4325269)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 12:17:40 -0400
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (3.0ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:4
+  Rendered tacos/index.html.erb within layouts/application (Duration: 255.2ms | Allocations: 2290539)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 427ms (Views: 360.9ms | ActiveRecord: 17.9ms | Allocations: 3855504)
+
+
+Started GET "/tacos/29" for ::1 at 2020-10-27 12:17:43 -0400
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mTaco Load (3.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:10:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 92239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 182ms (Views: 116.5ms | ActiveRecord: 3.1ms | Allocations: 1627177)
+
+
+Started GET "/tacos" for ::1 at 2020-10-27 12:17:46 -0400
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (2.0ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:4
+  Rendered tacos/index.html.erb within layouts/application (Duration: 111.6ms | Allocations: 1009141)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 251ms (Views: 224.7ms | ActiveRecord: 2.0ms | Allocations: 2199282)
+
+
+Started GET "/tacos/24" for ::1 at 2020-10-27 12:17:47 -0400
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTaco Load (1.4ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:10:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 61457)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 178ms (Views: 129.8ms | ActiveRecord: 1.4ms | Allocations: 1453509)
+
+
