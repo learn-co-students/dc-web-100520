@@ -1,8 +1,37 @@
-<h1>Taco Index Page</h1>
+<h1><%= @page_title %></h1>
 
+    
+    <%# <div>
+        <form method="GET" action="/tacos">
 
-<% @tacos.each do |taco| %>
-    <div class="taco-list-item"> 
-        <%= link_to taco.name, taco_path(taco.id) %>
+            <input type="radio" name="veggie" value="true"> Veggie Only
+            <input type="radio" name="veggie" value="false"> Meat Only
+            <input type="radio" name="veggie" value=""> All Tacos
+
+            <input type="submit" value="Submit this Form" >
+            
+        </form>
+    </div> %>
+
+    <div>
+        <%= form_tag tacos_path, method: "GET" do %>
+            <%= radio_button_tag "veggie", "true" %>
+            <%= label_tag "Vegetarian Only" %>
+            <%= radio_button_tag "veggie", "false" %>
+            <%= label_tag "Meat Only" %>
+            <%= radio_button_tag "veggie", "" %>
+            <%= label_tag "All Tacos" %>
+            <%= submit_tag "Submit These Tacos" %>
+        <% end %>
+    
     </div>
-<% end %>
+
+<div>
+
+    <% @tacos.each do |taco| %>
+        <div class="taco-list-item"> 
+            <%= link_to taco.name, taco_path(taco.id) %> - <%= taco.vegetarian? %>
+        </div>
+    <% end %>
+
+</div>

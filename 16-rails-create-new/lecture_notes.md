@@ -2,7 +2,7 @@
 
 - On index page:
 
-```
+```rb
 Filter by vegetarian
 
 <form action="/tacos" method="GET">
@@ -20,7 +20,7 @@ Filter by vegetarian
 Taco.rb
 
 - Can also code incorrectly by getting Taco.all and then selecting instead of using ActiveRecord methods
-```
+```rb
 def self.vegetarian
     Taco.where(vegetarian: true)
 end

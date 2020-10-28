@@ -20,5 +20,9 @@ class ApplicationController < ActionController::Base
 
     end
 
+    def greetings
+        render "greetings"
+    end
+
 
 end
