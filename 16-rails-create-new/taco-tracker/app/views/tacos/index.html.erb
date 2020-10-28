@@ -1,0 +1,8 @@
+<h1>Taco Index Page</h1>
+
+
+<% @tacos.each do |taco| %>
+    <div class="taco-list-item"> 
+        <%= link_to taco.name, taco_path(taco.id) %>
+    </div>
+<% end %>
