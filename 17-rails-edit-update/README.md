@@ -7,10 +7,11 @@
 
 # Questions
 
-- routes
-    - link_helpers, as: _____
-    - routes page to get necessary info
-    - using resources (e.g., only: [index, show])
-- steps to set up a new resource (model, view, controller)
-- how to toggle, or, more broadly, have a route that doesn't correspond to a view
-- how does CRUD factor in?
+- form_for, how does it work, why do we need an instance variable
+- strong_params, require vs permit
+- 
+
+# notes
+form_tag vs form_for
+form_tag:  Always usable
+form_for: Used when creating or updating an ActiveRecord object

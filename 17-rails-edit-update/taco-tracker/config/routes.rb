@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   # get "/tacos/new", to: "tacos#new", as: "new_taco"
   # get "/tacos/:id", to: "tacos#show", as: "taco"
   # post "/tacos", to: "tacos#create", as: "tacos"
-  resources :tacos, only: [:index, :show, :new, :create]
-  
-  get "/print_to_terminal", to: "tacos#rubydooby"
-  get "/hi_all", to: "application#greetings", as: "greetings"
+  resources :tacos, only: [:new, :index, :show, :create, :edit, :update]
+  get "/show_the_taco_form", to: "tacos#petey_is_great"
+get "/print_to_terminal", to: "tacos#rubydooby"
+  get("/hi_all", {to: "application#greetings", as: "greetings"})
   
 end

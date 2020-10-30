@@ -21,23 +21,43 @@ class TacosController < ApplicationController
     end
 
     def new
-        render :new
+        #using a form_for
+        @taco = Taco.new # don't save
+        render :new 
+    end
+
+    def petey_is_great
+        # using a form_tag
+        render :hi_anne
     end
 
     def create
-        new_taco_name = params[:name]
-        new_taco_price = params[:price]
-        new_taco_vegetarian = params[:vegetarian]
-        new_taco = Taco.create(name: new_taco_name,
-                               price: new_taco_price,
-                               vegetarian: new_taco_vegetarian)
+        new_taco = Taco.create(taco_params)
         redirect_to taco_path(new_taco.id)
 
     end
     
+    def edit
+        @taco = Taco.find(params[:id])
+        render :edit
+    end
+
+    def update
+        @taco = Taco.find(params[:id])
+        @taco.update(taco_params)
+        redirect_to taco_path(@taco.id)  # www.tacotracker.com/tacos/49 (show page)
+        # redirect_to "http://www.google.com"
+    end
+
     def rubydooby
         puts "\n\n\n\nHello Ruby Dooby Doo\n\n\n\n"
         return nil
+    end
+
+    private
+
+    def taco_params
+        params.require(:taco).permit(:name, :price, :vegetarian)
     end
 
     # def veggie

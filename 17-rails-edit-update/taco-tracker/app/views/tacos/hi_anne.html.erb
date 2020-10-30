@@ -1,0 +1,13 @@
+<h1>Create a new taco</h1>
+
+
+<%= form_tag tacos_path do %>
+    <%= label_tag :name, "Name" %>
+    <%= text_field_tag :name %>
+    <%= label_tag :price, "Price" %>
+    <%= number_field_tag :price %>
+    <%= label_tag :vegetarian, "Vegetarian?" %>
+    <%= select_tag :vegetarian, options_for_select(["true", "false"]) %>
+
+    <%= submit_tag "Make a Taco" %>
+<% end %>
