@@ -39,8 +39,8 @@ class TacosController < ApplicationController
     end
 
     def create
-        byebug
         new_taco = Taco.create(taco_params)
+        # byebug
         redirect_to taco_path(new_taco.id)
 
     end
@@ -71,7 +71,7 @@ class TacosController < ApplicationController
     private
 
     def taco_params
-        params.require(:taco).permit(:name, :price, :vegetarian)
+        params.require(:taco).permit(:name, :price, :vegetarian, :restaurant_id)
     end
 
 end

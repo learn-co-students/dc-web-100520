@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+ 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :tacos
+  resources :restaurants, only: [:index, :show]
 
   get "/", to: "application#home"
   get "/hi/:name", to: "application#hello", as: "hello"
@@ -10,7 +13,6 @@ Rails.application.routes.draw do
   # get "/tacos/new", to: "tacos#new", as: "new_taco"
   # get "/tacos/:id", to: "tacos#show", as: "taco"
   # post "/tacos", to: "tacos#create", as: "tacos"
-  resources :tacos
   get "/show_the_taco_form", to: "tacos#petey_is_great"
   get "/print_to_terminal", to: "tacos#rubydooby"
   get "/hi_all", {to: "application#greetings", as: "greetings"}

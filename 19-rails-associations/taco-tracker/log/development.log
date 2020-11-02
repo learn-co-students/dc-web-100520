@@ -5380,3 +5380,492 @@ Migrating to AddRestaurantIdToTaco (20201102151828)
   [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."restaurant_id" = ? LIMIT ?[0m  [["restaurant_id", 6], ["LIMIT", 11]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "tacos"."id" FROM "tacos" WHERE "tacos"."restaurant_id" = ?[0m  [["restaurant_id", 6]]
   [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" ORDER BY "tacos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/restaurants" for ::1 at 2020-11-02 11:24:12 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 457)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 20777)
+
+
+Started GET "/restaurants" for ::1 at 2020-11-02 11:25:11 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:4
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 3964)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 24.1ms | ActiveRecord: 1.4ms | Allocations: 9927)
+
+
+Started GET "/restaurants/1" for ::1 at 2020-11-02 11:25:26 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4253)
+
+
+Started GET "/restaurants/1" for ::1 at 2020-11-02 11:27:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms | Allocations: 2909)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=1):
+  
+app/controllers/restaurants_controller.rb:7:in `show'
+Started GET "/restaurants/2" for ::1 at 2020-11-02 11:27:53 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1228)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=2):
+  
+app/controllers/restaurants_controller.rb:7:in `show'
+Started GET "/restaurants/6" for ::1 at 2020-11-02 11:28:02 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2565)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 22.4ms | ActiveRecord: 0.2ms | Allocations: 10336)
+
+
+Started GET "/restaurants/7" for ::1 at 2020-11-02 11:28:09 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 4623)
+
+
+Started GET "/restaurants/8" for ::1 at 2020-11-02 11:28:13 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 4594)
+
+
+Started GET "/restaurants/11" for ::1 at 2020-11-02 11:28:16 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1197)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=11):
+  
+app/controllers/restaurants_controller.rb:7:in `show'
+Started GET "/restaurants/8" for ::1 at 2020-11-02 11:28:20 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 4614)
+
+
+Started GET "/restaurants/9" for ::1 at 2020-11-02 11:28:33 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 4596)
+
+
+Started GET "/restaurants/9" for ::1 at 2020-11-02 11:28:38 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mTaco Load (0.5ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."restaurant_id" = ?[0m  [["restaurant_id", 9]]
+  ↳ app/views/restaurants/show.html.erb:7
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 16.5ms | Allocations: 8634)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 1.1ms | Allocations: 14001)
+
+
+Started GET "/tacos/51" for ::1 at 2020-11-02 11:28:48 -0500
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:20:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 247)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 5440)
+
+
+Started GET "/restaurants/9" for ::1 at 2020-11-02 11:29:31 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."restaurant_id" = ?[0m  [["restaurant_id", 9]]
+  ↳ app/views/restaurants/show.html.erb:7
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.4ms | Allocations: 6569)
+
+
+Started GET "/restaurants/9" for ::1 at 2020-11-02 11:30:33 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."restaurant_id" = ?[0m  [["restaurant_id", 9]]
+  ↳ app/views/restaurants/show.html.erb:8
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1127)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 6581)
+
+
+Started GET "/restaurants" for ::1 at 2020-11-02 11:32:46 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:4
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 813)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.3ms | Allocations: 5001)
+
+
+Started GET "/restaurants" for ::1 at 2020-11-02 11:33:00 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:4
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 927)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 5858)
+
+
+Started GET "/restaurants/10" for ::1 at 2020-11-02 11:33:02 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mTaco Load (0.8ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."restaurant_id" = ?[0m  [["restaurant_id", 10]]
+  ↳ app/views/restaurants/show.html.erb:8
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1123)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.9ms | Allocations: 5804)
+
+
+Started GET "/tacos/50" for ::1 at 2020-11-02 11:33:03 -0500
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:20:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 5351)
+
+
+Started PATCH "/i_love_meat/50" for ::1 at 2020-11-02 11:33:05 -0500
+Processing by TacosController#meat_is_great as HTML
+  Parameters: {"authenticity_token"=>"c7/od626lrqtUVSN9CHLP8D1uaLNpzeZyo8komXRmqQZ/Makb99c5dsIKu+Ckbn3GLroH8ZyDmZXfkPivJSacg==", "id"=>"50"}
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:35:in `meat_is_great'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tacos_controller.rb:37:in `meat_is_great'
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:37:in `meat_is_great'
+  [1m[36mTaco Update (1.2ms)[0m  [1m[33mUPDATE "tacos" SET "vegetarian" = ?, "updated_at" = ? WHERE "tacos"."id" = ?[0m  [["vegetarian", 0], ["updated_at", "2020-11-02 16:33:05.729178"], ["id", 50]]
+  ↳ app/controllers/tacos_controller.rb:37:in `meat_is_great'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tacos_controller.rb:37:in `meat_is_great'
+Redirected to http://localhost:3000/tacos/50
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms | Allocations: 4761)
+
+
+Started GET "/tacos/50" for ::1 at 2020-11-02 11:33:05 -0500
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:20:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  Rendered tacos/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4629)
+
+
+Started GET "/tacos" for ::1 at 2020-11-02 11:33:06 -0500
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (0.3ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:32
+  Rendered tacos/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2974)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.3ms | Allocations: 7159)
+
+
+Started GET "/tacos/new" for ::1 at 2020-11-02 11:33:20 -0500
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  Rendered tacos/new.html.erb within layouts/application (Duration: 210.5ms | Allocations: 198225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 216ms (Views: 215.9ms | ActiveRecord: 0.0ms | Allocations: 202378)
+
+
+Started GET "/tacos/new" for ::1 at 2020-11-02 11:39:13 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/tacos/new.html.erb:13
+  Rendered tacos/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4033)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.1ms | Allocations: 8836)
+
+
+Started GET "/tacos/new" for ::1 at 2020-11-02 11:40:03 -0500
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/tacos/new.html.erb:13
+  Rendered tacos/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 6929)
+
+
+Started GET "/tacos/new" for ::1 at 2020-11-02 11:40:44 -0500
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/tacos/new.html.erb:13
+  Rendered tacos/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5068)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.1ms | Allocations: 9874)
+
+
+Started GET "/tacos/new" for ::1 at 2020-11-02 11:41:03 -0500
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/tacos/new.html.erb:13
+  Rendered tacos/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 7563)
+
+
+Started GET "/tacos/new" for ::1 at 2020-11-02 11:41:18 -0500
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/tacos/new.html.erb:13
+  Rendered tacos/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2032)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 6949)
+
+
+Started GET "/tacos" for ::1 at 2020-11-02 11:42:10 -0500
+Processing by TacosController#index as HTML
+  Rendering tacos/index.html.erb within layouts/application
+  [1m[36mTaco Load (0.7ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos"[0m
+  ↳ app/views/tacos/index.html.erb:32
+  Rendered tacos/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.7ms | Allocations: 7894)
+
+
+Started GET "/tacos/50" for ::1 at 2020-11-02 11:42:12 -0500
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:20:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/tacos/show.html.erb:4
+  Rendered tacos/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 988)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 5701)
+
+
+Started GET "/tacos/50" for ::1 at 2020-11-02 11:42:34 -0500
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mTaco Load (0.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:20:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/tacos/show.html.erb:4
+  Rendered tacos/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 997)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 6456)
+
+
+Started GET "/restaurants/10" for ::1 at 2020-11-02 11:42:35 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mTaco Load (0.3ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."restaurant_id" = ?[0m  [["restaurant_id", 10]]
+  ↳ app/views/restaurants/show.html.erb:8
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 6257)
+
+
+Started GET "/tacos/61" for ::1 at 2020-11-02 11:42:38 -0500
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:20:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/tacos/show.html.erb:4
+  Rendered tacos/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.3ms | Allocations: 5387)
+
+
+Started GET "/restaurants/10" for ::1 at 2020-11-02 11:42:40 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:7:in `show'
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mTaco Load (0.2ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."restaurant_id" = ?[0m  [["restaurant_id", 10]]
+  ↳ app/views/restaurants/show.html.erb:8
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 952)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.5ms | Allocations: 5509)
+
+
+Started GET "/tacos/new" for ::1 at 2020-11-02 11:42:44 -0500
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/tacos/new.html.erb:13
+  Rendered tacos/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 6162)
+
+
+Started POST "/tacos" for ::1 at 2020-11-02 11:42:52 -0500
+Processing by TacosController#create as HTML
+  Parameters: {"authenticity_token"=>"76aBxQuaSuvMSOn5vLUfCL0uf4vkrGuXVCEZkKdHedWF5a8Wyf+AtLoRl5vKBW3AZWEuNu95UmjJ0H7QfgJ5Aw==", "taco"=>{"name"=>"Hipster Mustache Taco", "price"=>"5", "vegetarian"=>"true", "restaurant_id"=>"6"}, "commit"=>"Create Taco"}
+Completed 500 Internal Server Error in 10780ms (ActiveRecord: 0.0ms | Allocations: 55409)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/tacos_controller.rb:43:in `create'
+Started POST "/tacos" for ::1 at 2020-11-02 11:43:23 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TacosController#create as HTML
+  Parameters: {"authenticity_token"=>"76aBxQuaSuvMSOn5vLUfCL0uf4vkrGuXVCEZkKdHedWF5a8Wyf+AtLoRl5vKBW3AZWEuNu95UmjJ0H7QfgJ5Aw==", "taco"=>{"name"=>"This won't work", "price"=>"5", "vegetarian"=>"true", "restaurant_id"=>"6"}, "commit"=>"Create Taco"}
+[31mUnpermitted parameter: :restaurant_id[0m
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 5.4ms | Allocations: 1729200)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"tacos", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/tacos_controller.rb:43:in `create'
+Started POST "/tacos" for ::1 at 2020-11-02 11:44:10 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TacosController#create as HTML
+  Parameters: {"authenticity_token"=>"76aBxQuaSuvMSOn5vLUfCL0uf4vkrGuXVCEZkKdHedWF5a8Wyf+AtLoRl5vKBW3AZWEuNu95UmjJ0H7QfgJ5Aw==", "taco"=>{"name"=>"This won't work", "price"=>"5", "vegetarian"=>"true", "restaurant_id"=>"6"}, "commit"=>"Create Taco"}
+[31mUnpermitted parameter: :restaurant_id[0m
+Completed 500 Internal Server Error in 55043ms (ActiveRecord: 6.9ms | Allocations: 1993710)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/tacos_controller.rb:44:in `create'
+Started POST "/tacos" for ::1 at 2020-11-02 11:45:07 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TacosController#create as HTML
+  Parameters: {"authenticity_token"=>"76aBxQuaSuvMSOn5vLUfCL0uf4vkrGuXVCEZkKdHedWF5a8Wyf+AtLoRl5vKBW3AZWEuNu95UmjJ0H7QfgJ5Aw==", "taco"=>{"name"=>"This won't work", "price"=>"5", "vegetarian"=>"true", "restaurant_id"=>"6"}, "commit"=>"Create Taco"}
+[31mUnpermitted parameter: :restaurant_id[0m
+Completed 500 Internal Server Error in 2770ms (ActiveRecord: 0.0ms | Allocations: 1705903)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/tacos_controller.rb:44:in `create'
+Started GET "/tacos/new" for ::1 at 2020-11-02 11:45:23 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TacosController#new as HTML
+  Rendering tacos/new.html.erb within layouts/application
+  [1m[36mRestaurant Load (2.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/tacos/new.html.erb:13
+  Rendered tacos/new.html.erb within layouts/application (Duration: 165.8ms | Allocations: 1776830)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 371ms (Views: 230.6ms | ActiveRecord: 18.1ms | Allocations: 3877942)
+
+
+Started POST "/tacos" for ::1 at 2020-11-02 11:45:30 -0500
+Processing by TacosController#create as HTML
+  Parameters: {"authenticity_token"=>"N3QeQqUpJjez+t12nZd0R8KkFj/GayEI2G//2peheCJdNzCRZ0zsaMWjoxTrJwaPGutHgs2+GPdFnpiaTuR49A==", "taco"=>{"name"=>"This will work", "price"=>"5", "vegetarian"=>"true", "restaurant_id"=>"6"}, "commit"=>"Create Taco"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tacos_controller.rb:42:in `create'
+  [1m[36mRestaurant Load (1.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:42:in `create'
+  [1m[36mTaco Create (2.3ms)[0m  [1m[32mINSERT INTO "tacos" ("name", "vegetarian", "price", "created_at", "updated_at", "restaurant_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "This will work"], ["vegetarian", 1], ["price", 5.0], ["created_at", "2020-11-02 16:45:30.971025"], ["updated_at", "2020-11-02 16:45:30.971025"], ["restaurant_id", 6]]
+  ↳ app/controllers/tacos_controller.rb:42:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tacos_controller.rb:42:in `create'
+Redirected to http://localhost:3000/tacos/70
+Completed 302 Found in 149ms (ActiveRecord: 5.7ms | Allocations: 1476103)
+
+
+Started GET "/tacos/70" for ::1 at 2020-11-02 11:45:31 -0500
+Processing by TacosController#show as HTML
+  Parameters: {"id"=>"70"}
+  [1m[36mTaco Load (2.1ms)[0m  [1m[34mSELECT "tacos".* FROM "tacos" WHERE "tacos"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/tacos_controller.rb:20:in `show'
+  Rendering tacos/show.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/tacos/show.html.erb:4
+  Rendered tacos/show.html.erb within layouts/application (Duration: 45.3ms | Allocations: 441656)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 211ms (Views: 158.7ms | ActiveRecord: 3.0ms | Allocations: 2091653)
+
+
