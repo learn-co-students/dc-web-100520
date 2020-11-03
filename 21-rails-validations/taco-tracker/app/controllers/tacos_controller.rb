@@ -39,9 +39,14 @@ class TacosController < ApplicationController
     end
 
     def create
-        new_taco = Taco.create(taco_params)
-        # byebug
-        redirect_to taco_path(new_taco.id)
+        @taco = Taco.new(taco_params)
+        if @taco.valid? # check to see if it's good
+            @taco.save 
+            redirect_to taco_path(@taco.id)
+        else 
+            # @taco = new_taco
+            render :new
+        end
 
     end
     

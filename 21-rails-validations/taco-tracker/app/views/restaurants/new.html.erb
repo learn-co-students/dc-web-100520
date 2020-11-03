@@ -1,5 +1,8 @@
 <h1>Create a new restaurant</h1>
 
+<%= render partial: "shared/error_list", locals: {new_object: @restaurant} %>
+
+
 <%= form_for @restaurant do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>

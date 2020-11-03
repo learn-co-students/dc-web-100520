@@ -1,4 +1,4 @@
-restaurants = "select name, id from restaurants JOIN menu_items WHERE menu_item.restaurant_id = restaurant.id"
 
 
-Restaurant.where(dishes.count > 20)
+if unicorns_exist? && database_call(takes_a_lot_of_time)
+        do something
