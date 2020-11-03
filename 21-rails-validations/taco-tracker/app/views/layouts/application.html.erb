@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby Dooby Doo's Taco Tracker</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render partial: "application/navbar" %>
+
+    <%= yield %>
+
+    <footer>
+      <div>Copyright 2020 by Ruby Dooby Doo</div>
+    </footer>
+
+  </body>
+</html>

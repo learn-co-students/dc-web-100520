@@ -1,0 +1,21 @@
+<%= form_for @taco do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :price %>
+    
+    <%= f.number_field :price %>
+    <%= f.label :vegetarian %>
+    <%= f.select(:vegetarian, ["true", "false"]) %>
+<%#  
+    <%= f.collection_select 
+        :restaurant_id, # method on @taco 
+                        #(parameter key we are filling in)
+
+        Restaurant.all, # choose from all restaurants
+        :id, # method on a Restaurant (value in params)
+        :name # method on a Restaurant(text to show user)
+    %>
+
+    <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
+    <%= f.submit %>
+<% end %>
