@@ -1,0 +1,25 @@
+<h1>Scientists#show</h1>
+<p>Find me in app/views/scientists/show.html.erb</p>
+
+<%= @scientist.name %>
+<%= @scientist.field_of_study %>
+
+
+    <% if @scientist.planets.any? %>
+        <div>
+            <h2>Planets Visited:</h2>
+            <% @scientist.planets.uniq.each do |planet| %>
+                <div><%= planet.name %></div>
+            <% end %>
+    <% else %>
+        <div>This Scientist has never left Earth.</div>
+    <% end %>
+        
+
+
+
+
+
+</div>
+<%= button_to "Delete this scientist", scientist_path(@scientist.id), :method => "delete" %>
+<%= link_to "Index Page",  scientists_path %>
