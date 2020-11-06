@@ -1,0 +1,13 @@
+<h1>Taco Detail Page</h1>
+
+<h3><%= @taco.name %></h3>
+<h4><%= link_to @taco.restaurant.name, restaurant_path(@taco.restaurant.id) %></h4>
+
+<div>
+    <div>Price: <%= @taco.price %></div>
+    <div>Vegetarian: <%= @taco.vegetarian %></div>
+</div>
+
+<%= link_to "Toggle Meat", add_meat_path(@taco.id), method: "PATCH"%>
+<%= link_to "Back to Taco Index Page", tacos_path %>
+<%= link_to "Edit this taco", edit_taco_path(@taco) %>
