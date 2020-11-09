@@ -1,0 +1,611 @@
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20201109194757)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201109194757"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-09 19:52:45.526945"], ["updated_at", "2020-11-09 19:52:45.526945"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Vidhi"], ["password_digest", "$2a$12$.HFJGkJfdDDOF8W7I3Z36uN3aM5jrdwz7p0Xc5MnO/XQFXm1mE.bC"], ["created_at", "2020-11-09 19:52:59.837465"], ["updated_at", "2020-11-09 19:52:59.837465"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-11-09 14:06:22 -0600
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.5ms | Allocations: 480)
+Completed 200 OK in 91ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 2636)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:06:31 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 80.3ms | Allocations: 6312)
+Completed 200 OK in 173ms (Views: 156.8ms | ActiveRecord: 0.0ms | Allocations: 21686)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:07:12 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2354)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4850)
+
+
+Started POST "/signup" for ::1 at 2020-11-09 14:07:53 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"dp5vDDfjDKEQURm53LMZ7JxUuO7DRm8XNy2Oeb/ZCtfVRf8DMNSIO1iPKb0wyoYBbdUcy2MHSdJGv9eYFT1DzQ==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"SignUp"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 500 Internal Server Error in 368107ms (ActiveRecord: 0.0ms | Allocations: 146641)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:9:in `create'
+Started GET "/signup" for ::1 at 2020-11-09 14:14:07 -0600
+  [1m[35m (10.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/signup" for ::1 at 2020-11-09 14:14:11 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 31.7ms | Allocations: 232700)
+Completed 200 OK in 150ms (Views: 133.2ms | ActiveRecord: 0.0ms | Allocations: 845400)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 49.8ms | Allocations: 232688)
+Completed 200 OK in 178ms (Views: 159.9ms | ActiveRecord: 0.0ms | Allocations: 844632)
+
+
+Started POST "/signup" for ::1 at 2020-11-09 14:14:24 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"1qoZtRDRZkl/RAxUpX3v3rHLsQDHu6fH4/r6RZiXZxl1cYm6F+bi0zeaPFBJBHAzQEoVJWf6gQKSaKOkMnMuAw==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"SignUp"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 500 Internal Server Error in 646649ms (ActiveRecord: 0.0ms | Allocations: 501049)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:9:in `create'
+Started GET "/signup" for ::1 at 2020-11-09 14:25:16 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 53.7ms | Allocations: 339473)
+Completed 200 OK in 221ms (Views: 195.2ms | ActiveRecord: 0.0ms | Allocations: 1308081)
+
+
+Started POST "/signup" for ::1 at 2020-11-09 14:25:40 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"SBNLORZfj5Mefdkod1XFzcD95H0LU2wJWHDJhaGP/XzryNs2EWgLCVaj6SybLFogMXxAWKsSSswp4pBkC2u0Zg==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"SignUp"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (2.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (4.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "vidhi03"], ["password_digest", "$2a$12$amv6UoUJ1VJeF/mo9hMwquvtDX5SrCmFcY4JoZLoKkCEyjvo28m6G"], ["created_at", "2020-11-09 20:25:41.601095"], ["updated_at", "2020-11-09 20:25:41.601095"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 760ms (ActiveRecord: 26.0ms | Allocations: 2653402)
+
+
+Started GET "/users/2" for ::1 at 2020-11-09 14:25:41 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 43408)
+Completed 200 OK in 239ms (Views: 110.2ms | ActiveRecord: 2.1ms | Allocations: 1478076)
+
+
+Started GET "/users/2" for ::1 at 2020-11-09 14:27:51 -0600
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 15674)
+Completed 200 OK in 496ms (Views: 133.3ms | ActiveRecord: 27.5ms | Allocations: 2469280)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:27:56 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 76.9ms | Allocations: 300831)
+Completed 200 OK in 275ms (Views: 244.7ms | ActiveRecord: 0.0ms | Allocations: 1049953)
+
+
+Started POST "/signup" for ::1 at 2020-11-09 14:28:06 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"4gLTTKxyIm8ggBdAx73g8q54/AXtyEgwGc1cnSX1e/VB2UNDq0Wm9WheJ0QrxH8fX/lYIE2JbvVoXwV8jxEy7w==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"SignUp"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mUser Exists? (5.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "vidhi03"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 549ms (ActiveRecord: 5.9ms | Allocations: 1146061)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:28:06 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 62.7ms | Allocations: 300836)
+Completed 200 OK in 206ms (Views: 184.7ms | ActiveRecord: 0.0ms | Allocations: 1052847)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:29:16 -0600
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 38.6ms | Allocations: 300840)
+Completed 200 OK in 192ms (Views: 154.4ms | ActiveRecord: 0.0ms | Allocations: 1098815)
+
+
+Started POST "/signup" for ::1 at 2020-11-09 14:29:27 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"DpUEVEiT/AL3DhAlv1ctniFmoldwNEeZGjjaWI+9q1itTpRbT6R4mL/QICFTLrJz0OcGctB1YVxrqoO5JVniQg==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"SignUp"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mUser Exists? (9.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "vidhi03"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 32.6ms | Allocations: 244384)
+Completed 200 OK in 785ms (Views: 129.5ms | ActiveRecord: 48.3ms | Allocations: 3192495)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:32:09 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 66.7ms | Allocations: 420439)
+Completed 200 OK in 242ms (Views: 204.0ms | ActiveRecord: 0.0ms | Allocations: 1386051)
+
+
+Started POST "/signup" for ::1 at 2020-11-09 14:32:30 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ReLumxHQK91IH6yGMX0YEKEoB/F0CmyS+ZYwHDvzxNPmOX6UFuevRwDBnILdBIf9UKmj1NRLSleIBGn9kReNyQ==", "username"=>"Charles", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"SignUp"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mUser Exists? (6.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Charles"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 709ms (ActiveRecord: 24.1ms | Allocations: 2477802)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:32:31 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 62.6ms | Allocations: 374224)
+Completed 200 OK in 239ms (Views: 202.7ms | ActiveRecord: 0.0ms | Allocations: 1134804)
+
+
+Started POST "/signup" for ::1 at 2020-11-09 14:32:50 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"2zmZBoX1iKMfwHMddnzwUZeDDAZtBVgV8jO86EjV1Fh44gkJgsIMOVceQxmaBW+8ZgKoI81EftCDoeUJ4jGdQg==", "username"=>"Charles", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"SignUp"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[36mUser Exists? (5.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Charles"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mCACHE User Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Charles"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (5.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Charles"], ["password_digest", "$2a$12$7.yx0bmZzYAHrcVkKWWJaOZLADAUA3vpYrcrmKDJDp6wf7W6fUKFe"], ["created_at", "2020-11-09 20:32:51.244747"], ["updated_at", "2020-11-09 20:32:51.244747"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 604ms (ActiveRecord: 15.2ms | Allocations: 1951032)
+
+
+Started GET "/users/3" for ::1 at 2020-11-09 14:32:51 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 14.1ms | Allocations: 102181)
+Completed 200 OK in 279ms (Views: 172.8ms | ActiveRecord: 2.8ms | Allocations: 1752385)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:33:26 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 61.2ms | Allocations: 374228)
+Completed 200 OK in 174ms (Views: 154.4ms | ActiveRecord: 0.0ms | Allocations: 1123350)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:35:15 -0600
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 70.3ms | Allocations: 374225)
+Completed 200 OK in 243ms (Views: 220.6ms | ActiveRecord: 0.0ms | Allocations: 1171252)
+
+
+Started POST "/signup" for ::1 at 2020-11-09 14:35:38 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"an7C/94mlRN1WqhUfRz8zOrC2GA8p0XCoy25VIpdjn3JpVLw2RERiT2EmFCRZWMhG0N8RZzmYwfSv+C1ILnHZw==", "username"=>"vidhi03", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"SignUp"}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (8.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "vidhi03"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (7.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 792ms (ActiveRecord: 36.2ms | Allocations: 2847752)
+
+
+Started GET "/signup" for ::1 at 2020-11-09 14:35:39 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 63.4ms | Allocations: 374226)
+Completed 200 OK in 185ms (Views: 155.5ms | ActiveRecord: 0.0ms | Allocations: 1125239)
+
+
+Started GET "/login" for ::1 at 2020-11-09 14:50:50 -0600
+  
+ArgumentError (Invalid route name, already in use: 'login' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/login" for ::1 at 2020-11-09 14:51:28 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/logIn" for ::1 at 2020-11-09 14:51:34 -0600
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 3759)
+Completed 200 OK in 96ms (Views: 94.4ms | ActiveRecord: 0.0ms | Allocations: 19963)
+
+
+Started GET "/login" for ::1 at 2020-11-09 14:52:03 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2095)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3928)
+
+
+Started POST "/login" for ::1 at 2020-11-09 14:52:18 -0600
+Processing by LoginsController#create as HTML
+  Parameters: {"authenticity_token"=>"t8X5ju3EpHACGm3SWaFfasHZ8mzwP8auP0zdSMnRH9Z/6ha37D+pRc5R2TuESrvcX+JIc6qARZ5tI8kV5/Qksg==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"LogIn"}
+Completed 500 Internal Server Error in 5688ms (ActiveRecord: 0.0ms | Allocations: 39677)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/logins_controller.rb:9:in `create'
+Started GET "/login" for ::1 at 2020-11-09 14:52:51 -0600
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 68.2ms | Allocations: 258984)
+Completed 200 OK in 258ms (Views: 226.5ms | ActiveRecord: 0.0ms | Allocations: 963488)
+
+
+Started POST "/login" for ::1 at 2020-11-09 14:52:58 -0600
+Processing by LoginsController#create as HTML
+  Parameters: {"authenticity_token"=>"yCDCki6O7lPtcM0smcVy5FWL3S/MPXtSGX6bzx/vdxQADy2rL3XjZiE7ecVELpZSy7BnMJaC+GJLEY+SMcpMcA==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"LogIn"}
+Completed 500 Internal Server Error in 31517ms (ActiveRecord: 0.0ms | Allocations: 234901)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/logins_controller.rb:9:in `create'
+Started GET "/login" for ::1 at 2020-11-09 14:53:33 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 111.4ms | Allocations: 715721)
+Completed 500 Internal Server Error in 1168ms (ActiveRecord: 0.0ms | Allocations: 6824964)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> LogIn Form</h1>
+
+<%= form_with url: logIn_path , method: "post" do |f| %>
+<%= # form_with url: "login", method: "post" do |f| %>
+
+ <%= f.label :username %>
+ <%= f.text_field :username %>
+
+<%= f.label :password %>
+<%= f.password_field :password %> 
+
+<%= f.submit "LogIn" %>
+
+<% end %>
+):
+1:    <h1> LogIn Form</h1>
+2:    
+3:    <%= form_with url: logIn_path , method: "post" do |f| %>
+4:    <%= # form_with url: "login", method: "post" do |f| %>
+5:    
+6:     <%= f.label :username %>
+7:     <%= f.text_field :username %>
+8:    
+9:    <%= f.label :password %>
+10:    <%= f.password_field :password %> 
+11:    
+12:    <%= f.submit "LogIn" %>
+13:    
+14:    <% end %>
+  
+app/views/logins/new.html.erb:16: unterminated string meets end of file
+app/views/logins/new.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/logins/new.html.erb:16: unterminated string meets end of file
+app/views/logins/new.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/logins/new.html.erb:16: unterminated string meets end of file
+app/views/logins/new.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/logins/new.html.erb:16: unterminated string meets end of file
+app/views/logins/new.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/logins/new.html.erb:16: unterminated string meets end of file
+app/views/logins/new.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/logins/new.html.erb:16: unterminated string meets end of file
+app/views/logins/new.html.erb:16: syntax error, unexpected end-of-input, expecting end
+Started GET "/login" for ::1 at 2020-11-09 14:54:32 -0600
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 125.9ms | Allocations: 281745)
+Completed 200 OK in 479ms (Views: 412.2ms | ActiveRecord: 0.0ms | Allocations: 1043865)
+
+
+Started POST "/login" for ::1 at 2020-11-09 14:54:48 -0600
+Processing by LoginsController#create as HTML
+  Parameters: {"authenticity_token"=>"zTvED6CknkL0/4F40l1zEja9bIRrYoYX+TVy5sS+G2QFFCs2oV+Tdzi0NZEPtpekqIbWmzHdBSerWma76psgAA==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"LogIn"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "vidhi03"], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+Completed 500 Internal Server Error in 266583ms (ActiveRecord: 1.7ms | Allocations: 271047)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/logins_controller.rb:9:in `create'
+Started GET "/login" for ::1 at 2020-11-09 14:59:19 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 41.4ms | Allocations: 286597)
+Completed 200 OK in 172ms (Views: 156.2ms | ActiveRecord: 0.0ms | Allocations: 1011439)
+
+
+Started POST "/login" for ::1 at 2020-11-09 14:59:39 -0600
+Processing by LoginsController#create as HTML
+  Parameters: {"authenticity_token"=>"7nH45UyzBQJflEeMtsKTu6jeuuXdHuFiIz3HpNZ+/SEmXhfcTUgIN5Pf82VrKXcNNuUA+oehYlJxUtP5+FvGRQ==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"LogIn"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "vidhi03"], ["LIMIT", 1]]
+  ↳ app/controllers/logins_controller.rb:9:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 603ms (ActiveRecord: 39.7ms | Allocations: 1726549)
+
+
+Started GET "/login" for ::1 at 2020-11-09 14:59:40 -0600
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 56.8ms | Allocations: 286594)
+Completed 200 OK in 180ms (Views: 155.3ms | ActiveRecord: 0.0ms | Allocations: 971554)
+
+
+Started POST "/login" for ::1 at 2020-11-09 14:59:52 -0600
+Processing by LoginsController#create as HTML
+  Parameters: {"authenticity_token"=>"0zlZgqgMkEut8ql3JAWJlsMy4NNJJAAeYaUPkTyDlHYbFra7qfedfmG5HZ757m0gXQlazBObgy4zyhvMEqavEg==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"LogIn"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "vidhi03"], ["LIMIT", 1]]
+  ↳ app/controllers/logins_controller.rb:9:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 327ms (ActiveRecord: 5.8ms | Allocations: 588228)
+
+
+Started GET "/users/2" for ::1 at 2020-11-09 14:59:53 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 33095)
+Completed 200 OK in 176ms (Views: 106.8ms | ActiveRecord: 6.6ms | Allocations: 1169747)
+
+
+Started GET "/users/1" for ::1 at 2020-11-09 15:00:45 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 13891)
+Completed 200 OK in 185ms (Views: 129.1ms | ActiveRecord: 1.3ms | Allocations: 934485)
+
+
+Started GET "/users/1" for ::1 at 2020-11-09 15:01:25 -0600
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 13892)
+Completed 200 OK in 445ms (Views: 115.8ms | ActiveRecord: 31.7ms | Allocations: 2200412)
+
+
+Started GET "/users/1" for ::1 at 2020-11-09 15:06:53 -0600
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 23.8ms | Allocations: 133212)
+Completed 200 OK in 552ms (Views: 148.0ms | ActiveRecord: 24.8ms | Allocations: 2470611)
+
+
+Started DELETE "/logout" for ::1 at 2020-11-09 15:07:00 -0600
+Processing by LoginsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OLJy86UGnX90qgdX5mHftHWvCHJ5ZTGo0+j0Y6A+xxmgwagpLznH/j4ryq6Jqk5hRAjvq0I6dPDpKrqNq2zEbg==", "commit"=>"LogOut"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 50ms (ActiveRecord: 0.0ms | Allocations: 309185)
+
+
+Started GET "/login" for ::1 at 2020-11-09 15:07:01 -0600
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 56.8ms | Allocations: 323014)
+Completed 200 OK in 194ms (Views: 161.9ms | ActiveRecord: 0.0ms | Allocations: 1136075)
+
+
+Started GET "/users/1" for ::1 at 2020-11-09 15:07:24 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 404 Not Found in 30ms (ActiveRecord: 0.0ms | Allocations: 176858)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:23:in `show'
+Started GET "/signup" for ::1 at 2020-11-09 15:11:34 -0600
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 112709ms (ActiveRecord: 0.0ms | Allocations: 243609)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `logged_in?'
+app/controllers/application_controller.rb:12:in `logged_in?'
+Started GET "/signup" for ::1 at 2020-11-09 15:13:36 -0600
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 97.9ms | Allocations: 372846)
+Completed 200 OK in 241ms (Views: 209.1ms | ActiveRecord: 0.0ms | Allocations: 1139433)
+
+
+Started GET "/login" for ::1 at 2020-11-09 15:14:04 -0600
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 95.3ms | Allocations: 286596)
+Completed 200 OK in 259ms (Views: 236.7ms | ActiveRecord: 0.0ms | Allocations: 1024259)
+
+
+Started POST "/login" for ::1 at 2020-11-09 15:14:11 -0600
+Processing by LoginsController#create as HTML
+  Parameters: {"authenticity_token"=>"/YXrhrwKu/M/fmmn8bqa1uKxaX+Q984T3/12HLb64rc1qgS/vfG2xvM13U4sUX5gfIrTYMpITSONkmJBmN/Z0w==", "username"=>"vidhi03", "password"=>"[FILTERED]", "commit"=>"LogIn"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "vidhi03"], ["LIMIT", 1]]
+  ↳ app/controllers/logins_controller.rb:11:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 660ms (ActiveRecord: 28.2ms | Allocations: 1822853)
+
+
+Started GET "/users/2" for ::1 at 2020-11-09 15:14:12 -0600
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 56170ms (ActiveRecord: 0.0ms | Allocations: 135005)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `logged_in?'
+app/controllers/application_controller.rb:12:in `logged_in?'
+Started GET "/users/2" for ::1 at 2020-11-09 15:15:38 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 22.8ms | Allocations: 106476)
+Completed 200 OK in 503ms (Views: 161.7ms | ActiveRecord: 27.3ms | Allocations: 2310336)
+
+
+Started DELETE "/logout" for ::1 at 2020-11-09 15:15:48 -0600
+Processing by LoginsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uzBQS+tg2rtDuplRfaPXro3ywWuRrwyQeIWpZQlyqrMjQ4qRYV+AOgk7VKgSaEZ7vFUmsqrwSchCR+eLAiCpxA==", "commit"=>"LogOut"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 72ms (ActiveRecord: 0.0ms | Allocations: 326099)
+
+
+Started GET "/login" for ::1 at 2020-11-09 15:15:48 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 74.7ms | Allocations: 286601)
+Completed 200 OK in 234ms (Views: 206.2ms | ActiveRecord: 0.0ms | Allocations: 1019946)
+
+
+Started GET "/users/2" for ::1 at 2020-11-09 15:15:56 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in? rendered or redirected
+Completed 302 Found in 87ms (ActiveRecord: 0.0ms | Allocations: 236479)
+
+
+Started GET "/login" for ::1 at 2020-11-09 15:15:56 -0600
+Processing by LoginsController#new as HTML
+  Rendering logins/new.html.erb within layouts/application
+  Rendered logins/new.html.erb within layouts/application (Duration: 58.1ms | Allocations: 286599)
+Completed 200 OK in 180ms (Views: 158.7ms | ActiveRecord: 0.0ms | Allocations: 980851)
+
+
