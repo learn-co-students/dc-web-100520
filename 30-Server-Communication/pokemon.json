@@ -54,6 +54,46 @@
       "name": "ashley",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
       "id": 20
+    },
+    {
+      "name": "DooDooMon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/222.png",
+      "id": 21
+    },
+    {
+      "name": "DooDooMon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/222.png",
+      "id": 22
+    },
+    {
+      "name": "DooDooMon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/222.png",
+      "id": 23
+    },
+    {
+      "name": "NEWMAN",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+      "id": 24
+    },
+    {
+      "name": "sadf",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+      "id": 25
+    },
+    {
+      "name": "NEWNEWNEW",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+      "id": 26
+    },
+    {
+      "name": "NEWNEWNEW",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+      "id": 27
+    },
+    {
+      "name": "queryMOMNN",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+      "id": 28
     }
   ]
 }
