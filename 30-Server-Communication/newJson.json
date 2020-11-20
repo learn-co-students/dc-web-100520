@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "bulbasaur",
-      "sprite": "https://www.spriters-resource.com/resources/sheet_icons/31/33245.png"
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
     },
     {
       "id": 2,
@@ -54,6 +54,36 @@
       "name": "ashley",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
       "id": 20
+    },
+    {
+      "name": "DooDooMon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/222.png",
+      "id": 21
+    },
+    {
+      "name": "DooDooMon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/222.png",
+      "id": 22
+    },
+    {
+      "name": "DooDooMon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/222.png",
+      "id": 23
+    },
+    {
+      "name": "NEWMAN",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+      "id": 24
+    },
+    {
+      "name": "NEWMAN",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+      "id": 24
+    },
+    {
+      "name": "NEWMAN",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+      "id": 24
     }
   ]
 }
