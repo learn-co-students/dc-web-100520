@@ -1,16 +1,8 @@
+
+
 import React from 'react'
 
-export default function Comment() {
-    return (
-        <div>
-            This is a comment
-        </div>
-    )
+export default function Comment(props) {
+    console.log(props.somethingElse.text);
+return (<li onClick={() => console.log(props.somethingElse.userName)} class="list-group-item">{props.somethingElse.text}</li>)
 }
-
-
-// import React from 'react'
-
-// export default function Comment() {
-//     return (<li class="list-group-item">Cras justo odio</li>)
-// }

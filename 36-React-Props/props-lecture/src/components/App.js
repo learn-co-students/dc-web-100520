@@ -1,24 +1,21 @@
-import commentData from '../data/comments'
 
 //Components
 import Navbar from './Navbar'
 import Post from './Post'
 
 
-
+const sayHi = () => {
+  console.log("saying");
+}
 
 function App() {
-  console.log(commentData);
-
   return (
       <>
-        <Navbar />
+        <Navbar/>
         <div className="container">
           <div className="card-deck">
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            <Post  />
+       
           </div>
         </div>
       </>
