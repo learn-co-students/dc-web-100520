@@ -1,0 +1,92 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "bulbasaur",
+      "sprite": "https://www.spriters-resource.com/resources/sheet_icons/31/33245.png",
+      "ability": "chlorophyll",
+      "weight": 12,
+      "type": "grass"
+    },
+    {
+      "id": 2,
+      "name": "ivysaur",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+      "ability": "chlorophyll",
+      "weight": 122,
+      "type": "grass"
+    },
+    {
+      "id": 3,
+      "name": "venusaur",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+      "ability": "Big Body",
+      "weight":440,
+      "type": "grass"
+    },
+    {
+      "id": 4,
+      "name": "charmander",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+      "ability": "fire tail",
+      "weight": 7,
+      "type": "fire"
+    },
+    {
+      "id": 5,
+      "name": "charmeleon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+      "ability": "teenage attitude",
+      "weight": 14,
+      "type": "fire"
+    },
+    {
+      "id": 6,
+      "name": "charizard",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+      "ability": "wings",
+      "weight": 123,
+      "type": "fire"
+    },
+    {
+      "id": 7,
+      "name": "squirtle",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+      "ability": "water gun",
+      "weight": 10,
+      "type": "water"
+    },
+    {
+      "id": 8,
+      "name": "wartortle",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+      "ability": "chlorophyll",
+      "weight": 20,
+      "type": "water"
+    },
+    {
+      "id": 9,
+      "name": "blastoise",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+      "ability": "chlorophyll",
+      "weight": 330,
+      "type": "water"
+    },
+    {
+      "name": "rob",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+      "id": 18,
+      "ability": "chlorophyll",
+      "weight": 10,
+      "type": "poison"
+    },
+    {
+      "name": "ashley",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+      "id": 20,
+      "ability": "chlorophyll",
+      "weight": 123,
+      "type": "psychic"
+    }
+  ]
+}
