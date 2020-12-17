@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 //Components
 import PokeContainer from './PokemonContainer'
 import { Navbar } from '../Presentational/Navbar'
-import { Form } from '../Presentational/Form'
+import  Form  from '../Presentational/Form'
 import TeamContainer from './TeamContainer'
 
 
@@ -15,7 +15,7 @@ export default class App extends Component {
   }
 
   async componentDidMount(){
-    const response = await fetch('http://localhost:3001/pokemon')
+    const response = await fetch('http://localhost:3000/pokemon')
     const data = await response.json()
     this.setState({pokemon: data})
   }
@@ -37,9 +37,15 @@ export default class App extends Component {
     })
   }
 
+  handleNewPokemon = (pokemon) => {
+    this.setState({pokemon: [...this.state.pokemon, pokemon]})
+}
+
+
   render() {
 
     const pokeTeamMonsters = this.state.pokemon.filter(pokemon => this.state.team.includes(pokemon.id))
+    const pokeList = this.state.pokemon.filter(pokemon => !this.state.team.includes(pokemon.id))
 
     return (
       <div className="bg-dark">
@@ -47,7 +53,7 @@ export default class App extends Component {
         handleShowForm={this.handleShowForm}
       />
     
-      {this.state.showForm ? <Form /> : null}
+      {this.state.showForm ? <Form handleAdd={this.handleNewPokemon} /> : null}
       <TeamContainer
         removeFromTeam={this.removeFromTeam}
         pokemonData={pokeTeamMonsters}
@@ -55,7 +61,7 @@ export default class App extends Component {
       />
       <div className="container">
         <PokeContainer
-          pokemonData={this.state.pokemon}
+          pokemonData={pokeList}
           addToTeam={this.addToTeam}
         />
       </div>
