@@ -1,34 +1,19 @@
 import React from 'react'
 
-//components
-import Comment from './Comment'
+export const Post = ({ handleCurrentPainting, postInfo }) => {
 
-export const Post = (props) => {
-    console.log(props);
-
-    // let {title, artist, date, image} = postInfo
-
-    // let {name, hometown} = artist
-
-
-    // console.log(title, date, name, hometown);
+    const { image, title, artist, date } = postInfo
 
     return (
         <div className="col-4">
             <div className="card mb-3">
-                    <img className="card-img-top" src={props.postInfo.image} alt="Card image cap"/>
+                    <img className="card-img-top" src={image} alt="Card image cap"/>
                     <div className="card-body">
-                        <h5 className="card-title">{props.postInfo.title}</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-                        This content is a little bit longer.</p>
-                        <ul class="list-group list-group-flush">
-                            <Comment />
-                            <Comment />
-                            <Comment />
-                        </ul>
+                        <h5 className="card-title">{title}</h5>  
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">{`${props.postInfo.artist.name}-${props.postInfo.date}`}</small>
+                    <button onClick={() => handleCurrentPainting(postInfo)} className="btn btn-primary">Details</button>
+                    <div className="card-footer">
+                        <small className="text-muted">{`${artist.name}-${date}`}</small>
                     </div>
             </div>
         </div>

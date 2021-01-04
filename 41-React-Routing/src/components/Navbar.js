@@ -7,8 +7,8 @@ import Search from './Search'
 export default class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-dark bg-warning text-light ">
-                <span className="navbar-brand mb-0 h1">A V Cool Brand</span>
+            <nav className="navbar navbar-dark bg-info text-light ">
+                <h3 className="navbar-brand">Paint-Bop</h3>
                 <Search
                     handleTextChange={this.props.handleTextChange} 
                 />
