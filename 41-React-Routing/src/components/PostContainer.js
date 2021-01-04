@@ -11,7 +11,7 @@ export default class PostContainer extends Component {
         
         render() {
             return (
-                <div className="container row card-group">
+                <div className="container-fluid row">
                     {postData.filter(
                         painting => painting.title.includes(this.props.inputText))
                         .map(

@@ -5,7 +5,7 @@ export const Post = ({ handleCurrentPainting, postInfo }) => {
     const { image, title, artist, date } = postInfo
 
     return (
-        <div className="col-4">
+        <div className="col-sm-4">
             <div className="card mb-3">
                     <img className="card-img-top" src={image} alt="Card image cap"/>
                     <div className="card-body">

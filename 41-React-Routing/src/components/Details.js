@@ -5,7 +5,7 @@ export const Details = ({ paintingInfo }) => {
     const { image, title, artist, date } = paintingInfo
 
     return (
-        <div className="card text-center m-2 mb-5">
+        <div className="card text-center m-3 mb-5">
             <div className="card-header">
                 {title}
             </div>
