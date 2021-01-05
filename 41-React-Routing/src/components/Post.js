@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export const Post = ({ handleCurrentPainting, postInfo }) => {
+export const Post = ({ postInfo }) => {
 
     const { image, title, artist, date } = postInfo
 
@@ -11,7 +12,8 @@ export const Post = ({ handleCurrentPainting, postInfo }) => {
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>  
                     </div>
-                    <button onClick={() => handleCurrentPainting(postInfo)} className="btn btn-primary">Details</button>
+                    <Link to={`/gallery/${postInfo.id}`}> <button className="btn btn-primary">Details</button></Link>
+                    
                     <div className="card-footer">
                         <small className="text-muted">{`${artist.name}-${date}`}</small>
                     </div>
