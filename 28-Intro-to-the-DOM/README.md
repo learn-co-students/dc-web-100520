@@ -19,7 +19,7 @@
 
 ### Practice Manipulating the DOM
 
-- Twitter
+- Wikipedia
 - content
 - css styling
 - [DIY](https://en.wikipedia.org/wiki/Document_Object_Model)
